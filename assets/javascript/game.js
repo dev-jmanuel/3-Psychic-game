@@ -21,30 +21,20 @@ document.onkeyup = function(event) {
     if(userGuess === computerChoice) {
         wins++;
         guesses = 10;
-        usedArray = []
     } else {
         guesses--;
+        
     }
     
     if(guesses === 0){
         losses++;
         guesses = 10;
-        usedArray = []
-    }
-
-    if (usedArray.indexOf(playerGuess) >= 0) {
-
-    } else {
-          //this pushes the players incorrect guess to the usedArray and writes it to the HTML
-          usedArray.push(playerGuess);
-          document.getElementById('playerGuess').innerHTML = usedArray;
-          console.log(usedArray);
     }
 
     //Display
     winsText.textContent = "Wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
     guessesText.textContent = "Guesses: " + guesses;
-    lettersText.textcontent = "Letters guessed: " + userArray;
+    lettersText.textcontent = "Letters guessed: " + userGuess;
     
 }
