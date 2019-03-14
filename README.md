@@ -8,7 +8,6 @@ Guess which letter the computer is thinking in this very simple browser game pow
 * [Getting Started](#getting-started)
 * [Architecture](#architecture)
 
----
 
 ## Getting Started <a name="getting-started"></a>
 To install, run the following code in your git bash:
