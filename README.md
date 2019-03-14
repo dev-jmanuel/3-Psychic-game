@@ -2,7 +2,6 @@
 
 Guess which letter the computer is thinking in this very simple browser game powered by javascript code.
 
----
 
 ## Table of Contents:
 
@@ -18,7 +17,6 @@ To install, run the following code in your git bash:
 git clone https://github.com/joshespr/3-Psychic-game.git
 ```
 
----
 
 ## Architecture <a name="architecture"></a>
 This computer game is built from only HTML and Javascript which dynamically updates the HTML. The javascript code also checks for validation, meaning any guess that isn't a letter, or a duplicate, will not register. 
