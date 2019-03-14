@@ -33,11 +33,12 @@ document.onkeyup = function(event) {
     (userGuess === "u") || (userGuess === "v") || (userGuess === "w") || (userGuess === "x") || 
     (userGuess === "y") || (userGuess === "z")) {
         
+        messageText.textContent = " ";
 
         // Loop through the array to check for duplicate guesses
         for (var i = 0; i <  lettersGuessed.length; i++) {
             if (userGuess === lettersGuessed[i]) {
-                return guessesText.textContent = "You already guessed that letter";
+            return messageText.textContent = "You already guessed that letter";
             }
         }
 
@@ -46,15 +47,21 @@ document.onkeyup = function(event) {
             wins++;
             guesses = 10;
             lettersGuessed = [];
+            messageText.textContent = "You won!";
+
         } else {
             guesses--;
             lettersGuessed.push(userGuess);
+            messageText.textContent = " ";
+
         }
         
         if(guesses === 0){
             losses++;
             guesses = 10;
             lettersGuessed = [];
+            messageText.textContent = "You lost!";
+
         }
 
         // Display the player's current stats
